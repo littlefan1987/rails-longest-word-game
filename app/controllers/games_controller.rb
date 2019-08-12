@@ -5,7 +5,7 @@ class GamesController < ApplicationController
   def new
     @letters = []
     10.times { @letters << ('A'..'Z').to_a.sample }
-    return @letters
+    @letters
   end
 
   def score
@@ -34,6 +34,6 @@ class GamesController < ApplicationController
     url = "https://wagon-dictionary.herokuapp.com/#{keyword}"
     word_dictionary = open(url).read
     word = JSON.parse(word_dictionary)
-    return word['found']
+    word['found']
   end
 end
