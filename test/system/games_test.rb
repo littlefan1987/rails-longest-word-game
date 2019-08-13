@@ -10,9 +10,9 @@ class GamesTest < ApplicationSystemTestCase
   test 'Get a message that the word is not in the grid' do
     visit new_url
     fill_in 'word', with: 'car'
-    click_on 'play'
+    click_on 'Play'
 
-    assert_text "Sorry, can't build this word from the grid"
+    assert_text "Sorry"
   end
 
   test 'Get a message it/s not a valid English word' do
